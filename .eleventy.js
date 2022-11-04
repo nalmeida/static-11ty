@@ -2,6 +2,8 @@ module.exports = function(eleventyConfig) {
 
 	eleventyConfig.addPassthroughCopy('src/assets/fonts');
 	eleventyConfig.addPassthroughCopy('src/assets/img');
+	eleventyConfig.addPassthroughCopy('src/favicon.ico');
+	eleventyConfig.addPassthroughCopy('src/robots.txt');
 
 	const UUID = Math.random().toString(36).slice(-8);
 
@@ -10,7 +12,7 @@ module.exports = function(eleventyConfig) {
   });
 
 	eleventyConfig.addShortcode('BASE_URL', function (value) {
-    return `/`;
+    return `http://localhost:8080`;
   });
 
 	return {
