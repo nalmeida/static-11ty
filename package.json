@@ -1,0 +1,17 @@
+{
+  "name": "static-11ty",
+  "version": "1.0.0",
+  "license": "CC-BY-3.0",
+  "private": false,
+  "author": {
+    "name": "Nicholas Almeida",
+    "url": "https://github.com/nalmeida"
+  },
+  "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --serve"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.2"
+  }
+}
