@@ -12,14 +12,14 @@ module.exports = function(eleventyConfig) {
 	const UUID = Math.random().toString(36).slice(-8);
 
 	eleventyConfig.addShortcode('VERSION', function (value) {
-    return `${UUID}`;
-  });
+		return `${UUID}`;
+	});
 
 	const BASE_URL = removeTrailingSlash(process.env.BASE_URL || 'http://localhost:8080');
 	
 	eleventyConfig.addShortcode('BASE_URL', function (value) {
-    return BASE_URL;
-  });
+		return BASE_URL;
+	});
 
 	return {
 		templateFormats: ['html', 'liquid'],
