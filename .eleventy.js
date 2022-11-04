@@ -1,5 +1,9 @@
 module.exports = function(eleventyConfig) {
 
+	function removeTrailingSlash(str) {
+		return str.replace(/\/+$/, '');
+	}
+
 	eleventyConfig.addPassthroughCopy('src/assets/fonts');
 	eleventyConfig.addPassthroughCopy('src/assets/img');
 	eleventyConfig.addPassthroughCopy('src/favicon.ico');
@@ -11,8 +15,10 @@ module.exports = function(eleventyConfig) {
     return `${UUID}`;
   });
 
+	const BASE_URL = removeTrailingSlash(process.env.BASE_URL || 'http://localhost:8080');
+	
 	eleventyConfig.addShortcode('BASE_URL', function (value) {
-    return `http://localhost:8080`;
+    return BASE_URL;
   });
 
 	return {
@@ -22,5 +28,4 @@ module.exports = function(eleventyConfig) {
 			output: '_site'
 		}
 	}
-
 }
