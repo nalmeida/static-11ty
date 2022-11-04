@@ -2,6 +2,8 @@
 
 Simple 11ty static website with minimum config required.
 
+It based on the amazing [11ty](https://github.com/11ty/eleventy) static site generator
+
 
 ⭐️ See this project live: https://static-11ty.netlify.app
 
@@ -20,6 +22,12 @@ BASE_URL: https://static-11ty.netlify.app
 ```
 
 Default value of `BASE_URL` `http://localhost:8080` from the [.eleventy.js file](.eleventy.js).
+
+It will run the following command:
+
+```sh
+$ npm run build
+```
 
 ---
 
