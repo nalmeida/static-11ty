@@ -20,3 +20,9 @@ BASE_URL: https://static-11ty.netlify.app
 ```
 
 Default value of `BASE_URL` `http://localhost:8080` from the [.eleventy.js file](.eleventy.js).
+
+---
+
+## Hosted by Netlify
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ea46593b-6007-4d46-907e-1224b2f58a37/deploy-status)](https://app.netlify.com/sites/static-11ty/deploys)
