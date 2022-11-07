@@ -11,25 +11,25 @@ It's based on the amazing [11ty](https://github.com/11ty/eleventy) static site g
 This is a super simple static website setup built on top of [11ty](https://github.com/11ty/eleventy). It has only one package dependency and perform simple tasks such as:
 
 1. Inject variables in the `html`, `css` and `js` files (`VERSION` and `BASE_URL`).
-2. Generates a valid `sitemap.xml` automaticly.
-3. Template system.
+2. Generates a valid `sitemap.xml` automatically.
+3. Optional template system based on [Nunjucks](https://mozilla.github.io/nunjucks/).
 
-## Files structure
+## Basic development info
 
 ### `.eleventy.js` configuration file
 
-All 11ty configuration are inside the [`.eleventy.js`](.eleventy.js) file. It is very basic but does 2 custom transformations:
+All 11ty configuration are inside the [`.eleventy.js`](.eleventy.js) file.
 
 ## Utilities
 
 ### The `VERSION` variable
 
-During the build, 11ty will generate a `uuid` of 8 characters to be used as a unique value to be apended at the end of static files to avoid CDN cache issues. E.g.:
+During the build, 11ty will generate an `uuid` of 8 characters to be used as unique value to be apended at the end of static files to avoid CDN cache issues. E.g.:
 
 ```html
 <script src="/assets/js/script.js?v={%VERSION%}"></script>
 
-will be replace to:
+will be replaced to:
 
 <script src="/assets/js/script.js?v=zpuf45ww"></script>
 ```
@@ -41,9 +41,9 @@ During the build, 11ty will replace the `{%BASE_URL%}` inside `html`, `css` and 
 ```html
 <script src="{%BASE_URL%}/assets/js/script.js"></script>
 
-will be replace to:
+will be replaced to:
 
-<script src="http://localhost:8080/assets/js/script.js?v=edf2k45fh"></script>
+<script src="http://localhost:8080/assets/js/script.js"></script>
 ```
 
 During the website deploy, set the `BASE_URL` env variable to the desired value. E.g.:
@@ -52,19 +52,23 @@ During the website deploy, set the `BASE_URL` env variable to the desired value.
 BASE_URL=https://myawesomewebsite.com
 ```
 
-If you want to force the `BASE_URL` website generation locally, you can run:
+To force the `BASE_URL` website generation locally, you can run:
 
 ```sh
 $ BASE_URL=https://myawesomewebsite.com npm run build
 ```
 
-## Local development
+# Local development
 
 ```sh
 $ npm start
 ```
 
-## Production Deploy
+It will launch a local server at `http://localhost:8080` with live reload enabled.
+
+By default, 11ty generates a `_site` folder with the transformed files inside.
+
+# Production Deploy
 
 It is required to set the set the env variable `BASE_URL` with the full path URL:
 
@@ -73,8 +77,6 @@ BASE_URL=https://static-11ty.netlify.app
 ```
 
 Default value of `BASE_URL` `http://localhost:8080` from the [.eleventy.js file](.eleventy.js).
-
-It will run the following command:
 
 ```sh
 $ npm run build
