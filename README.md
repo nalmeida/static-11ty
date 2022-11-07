@@ -2,7 +2,7 @@
 
 Simple 11ty static website with minimum config required.
 
-It's based on the amazing [11ty](https://github.com/11ty/eleventy) static site generator!
+It's based on the amazing [11ty](https://github.com/11ty/eleventy) static site generator! You can find an overview 2 min video about Eleventy here: https://www.youtube.com/watch?v=EZfNr-YblBE
 
 ⭐️ See this project live: https://static-11ty.netlify.app
 
