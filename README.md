@@ -14,6 +14,8 @@ This is a super simple static website setup built on top of [11ty](https://githu
 2. Generates a valid `sitemap.xml` automatically.
 3. Optional template system based on [Nunjucks](https://mozilla.github.io/nunjucks/).
 
+🧐 I know, 11ty is a super powerful tool and many things could be more sophsticated but, my intention with this project is to provide a useful development environment with minimal requirements and a easy to understand and use project structure.
+
 ## Basic development info
 
 ### `.eleventy.js` configuration file
