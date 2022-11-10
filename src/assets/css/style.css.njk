@@ -1,0 +1,90 @@
+---
+permalink: /assets/css/style.css
+date: Last Modified
+eleventyExcludeFromCollections: true
+---
+@import url("https://unpkg.com/modesto@latest/modesto.css");
+
+body {
+	background-image: url({%BASE_URL%}/assets/img/cool-background.png?v={%VERSION%});
+}
+
+header, nav {
+	margin:0;
+	padding:0;
+}
+
+header {
+  box-sizing: border-box;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  background-color: #ccc;
+  width: 100%;
+	flex-wrap: wrap;
+}
+
+.logo {
+  font-weight: bold;
+  padding: 1em;
+	flex-wrap: nowrap;
+	flex-shrink:0;
+}
+
+nav ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 0.5rem;
+  margin-right: 0.5rem;
+	flex-wrap: wrap;
+}
+nav ul li {
+  list-style-type: none;
+	margin:0;
+}
+
+nav ul li a {
+  font-weight: bold;
+  color: black;
+  display: block;
+  padding: .5em;
+  white-space: nowrap;
+	background-color: #ccc;
+}
+
+nav ul li a:visited,
+nav ul li a:visited:hover {
+  color: black;
+}
+
+nav ul li a:visited:hover,
+nav ul li a:hover {
+  color: white;
+  background-color: rgb(0, 0, 0, .8)
+}
+
+nav ul li a.active {
+	background-color: #efefef;
+}
+
+main {
+	min-height: 100%;
+	min-width: 100%;
+	box-sizing: border-box;
+	margin:0;
+	background-color: #fff;
+	padding: 1em;
+}
+
+h1 {
+	margin-top: 0;
+}
+
+footer {
+	text-align: left;
+	background-color: #ccc;
+	margin: 0;
+	padding: 1em;
+	bottom: 0;
+}

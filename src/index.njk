@@ -1,0 +1,28 @@
+---
+title: Home
+date: Last Modified
+---
+{% extends "main.njk" %}
+
+{% block content %}
+<h1>Home</h1>
+
+<h2>Variables</h2>
+<ul>
+	<li><code>{% raw %}{%BASE_URL%}{% endraw %} = {%BASE_URL%}</code></li>
+	<li><code>{% raw %}{%VERSION%}{% endraw %} = {%VERSION%}</code></li>
+	<li><code>{% raw %}{{title}}{% endraw %} = {{title}}</code></li>
+	<li><code>{% raw %}{{site.title}}{% endraw %} = {{site.title}}</code></li>
+</ul>
+
+<h2>Generator</h2>
+<p>
+	Site generated using <a href="https://github.com/nalmeida/static-11ty">static-11ty</a>.
+</p>
+{% endblock %}
+
+{% block footer %}
+<script>
+	window.analytics.track('page_viewed', 'home');
+</script>
+{% endblock %}

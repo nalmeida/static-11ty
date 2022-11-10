@@ -1,3 +1,9 @@
+---
+title: No template page
+date: Last Modified
+
+# You can use front matter variables inside a html page #
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,14 +13,28 @@
 
 <link rel="stylesheet" href="https://unpkg.com/modesto@latest/modesto.min.css">
 
-<title></title>
+<title>No template page - {{site.title}}</title>
 </head>
 <body>
 	<h1>I am a simple page, without template ...</h1>
 
+	<h2>Variables</h2>
+	<ul>
+		<li><code>{% raw %}{%BASE_URL%}{% endraw %} = {%BASE_URL%}</code></li>
+		<li><code>{% raw %}{%VERSION%}{% endraw %} = {%VERSION%}</code></li>
+		<li><code>{% raw %}{{title}}{% endraw %} = {{title}}</code></li>
+		<li><code>{% raw %}{{site.title}}{% endraw %} = {{site.title}}</code></li>
+	</ul>
+
 	<p>
-		But is possible to see the variables... BASE_URL = <code>{%BASE_URL%}</code>
+		<a href="{%BASE_URL%}/">Home</a>
 	</p>
+
+	<footer>
+		<small>
+			Footer - Check out the project: <a href="https://github.com/nalmeida/static-11ty">https://github.com/nalmeida/static-11ty</a>
+		</small>
+	</footer>
 	
 </body>
 </html>

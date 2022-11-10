@@ -3,23 +3,57 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Static 11ty</title>
+	<title>{% if title %}{{title}} - {{site.title}}{% else %}{{site.title}}{% endif %}</title>
 	<meta name="description" content="">
 
 	<link rel="stylesheet" href="{%BASE_URL%}/assets/css/style.css?v={%VERSION%}">
 </head>
 <body>
-<nav>
-	<a href="{%BASE_URL%}/">Home</a>
-	<a href="{%BASE_URL%}/sample-page">Sample Page</a>
-	<a href="{%BASE_URL%}/folder">Inside a folder</a>
-</nav>
+<header>
+  <div class="logo">
+    ※ 11ty Static
+  </div>
+	<nav>
+		<ul>
+			<li><a class="{% if page.url === '/' %} active{% endif %}" href="{%BASE_URL%}/">Home</a></li>
+			<li><a class="{% if page.url === '/sample-page/' %} active{% endif %}" href="{%BASE_URL%}/sample-page/">Sample Page</a></li>
+			<li><a class="{% if page.url === '/folder/' %} active{% endif %}" href="{%BASE_URL%}/folder/">Inside a folder</a></li>
+			<li><a class="{% if page.url === '/no-template-sample-page/' %} active{% endif %}" href="{%BASE_URL%}/no-template-sample-page/">No template page</a></li>
+		</ul>
+	</nav>
+</header>
+
 <main>
-{{ content | safe }}
+	{% block content %}
+	
+	{% endblock %}
 </main>
 <footer>
-	Footer
+	<small>
+		Footer - Check out the project: <a href="https://github.com/nalmeida/static-11ty">https://github.com/nalmeida/static-11ty</a>
+	</small>
 </footer>
+
 <script src="{%BASE_URL%}/assets/js/script.js?v={%VERSION%}"></script>
+
+<script>
+	// Add Your tracking script here!
+	// FakeTracker
+	window.analytics = {
+		track: function(args) {
+			console.log(args)
+		}
+	}
+	// EndFakeTracker
+</script>
+{% block footer %}
+<script>
+	window.analytics.track("page_viewed", {
+		event_category: "unlogged_end_users",
+		page_name: "wellness_intro_report"
+	});
+</script>
+{% endblock %}
+
 </body>
 </html>
