@@ -12,13 +12,13 @@ This is a super simple static website setup built on top of [11ty](https://githu
 
 ### Features
 
-#### ⚙️ [Nunjucks](https://mozilla.github.io/nunjucks/templating.html) template system
+#### 1. ⚙️ [Nunjucks](https://mozilla.github.io/nunjucks/templating.html) template system
 
 It has a [`base.njk`](src/_includes/base.njk) with your main HTML template.
 
 If you don't want to use `njk`, you can "compile" simple HTML files, such as [`no-template-sample-page.html`](src/no-template-sample-page.html)
 
-#### Custom Shortcodes
+#### 2. 🪄 Custom Shortcodes
 
 ##### The `VERSION` shortcode
 
@@ -56,11 +56,11 @@ To force the `BASE_URL` website generation locally, you can run:
 $ BASE_URL=https://myawesomewebsite.com npm run build
 ```
 
-#### 📂 Samples
+#### 3. 📂 Samples
 
 The project itself is a sample project, using all the features. Checkout the [`src`](src/) folder!
 
-#### 🔁 Commom website patterns
+#### 4. 🔁 Commom website patterns
 
 ##### Selected menu
 
@@ -70,7 +70,7 @@ You can find a simple "set current page active" on the [`src/_includes/base.njk`
 
 You can have some sort of analytics tracker and one specific trackin per page. You can find the usage example at the bottom of the  [`index.njk`](src/index.njk) file.
 
-#### 🧭 Sitemap generator
+#### 5. 🧭 Sitemap generator
 
 Automatic sitemap generator using the [`sitemap.njk`](src/sitemap.njk)!
 
