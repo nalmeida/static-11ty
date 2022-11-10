@@ -98,9 +98,9 @@ Automatic sitemap generator using the [`sitemap.njk`](src/sitemap.njk)!
 
 	Use `npm run build` to run a production version.
 
-3. Open [`src/_data/site.js`](src/_data/site.js) and adjust the values to your details.
+3. Open [`src/_data/site.js`](src/_data/site.js) and adjust the values to your details (specially [the website name](src/_data/site.js#L3)).
 
-4. Edit [`index.njk`](src/index.njk) to change the home page, and then create content within src/pages using any templating format you prefer to add content.
+4. Edit [`index.njk`](src/index.njk) to change the home page, and then create content within `src` folder to add content.
 
 # Local development
 
@@ -120,7 +120,7 @@ It is required to set the set the env variable `BASE_URL` with the full path URL
 BASE_URL=https://static-11ty.netlify.app
 ```
 
-Default value of `BASE_URL` `http://localhost:8080` from the [.eleventy.js file](.eleventy.js).
+Default value of `BASE_URL` `http://localhost:8080` from the [.eleventy.js](src/_data/site.js#L2) file.
 
 ```sh
 $ npm run build
