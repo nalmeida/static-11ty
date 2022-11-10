@@ -1,6 +1,6 @@
-# Static 11ty
+# ※ Static 11ty
 
-Simple 11ty static website with minimum config required.
+> Simple 11ty static website generator with minimum config required.
 
 It's based on the amazing [11ty](https://github.com/11ty/eleventy) static site generator! You can find an overview 2 min video about Eleventy here: https://www.youtube.com/watch?v=EZfNr-YblBE
 
@@ -8,23 +8,19 @@ It's based on the amazing [11ty](https://github.com/11ty/eleventy) static site g
 
 ## Why?
 
-This is a super simple static website setup built on top of [11ty](https://github.com/11ty/eleventy). It has only one package dependency and perform simple tasks such as:
+This is a super simple static website setup built on top of [11ty](https://github.com/11ty/eleventy). It has only one package dependency, 11ty itself!
 
-1. Inject variables in the `html`, `css` and `js` files (`VERSION` and `BASE_URL`).
-2. Generates a valid `sitemap.xml` automatically.
-3. Optional template system based on [Nunjucks](https://mozilla.github.io/nunjucks/).
+### Features
 
-🧐 I know, 11ty is a super powerful tool and many things could be more sophsticated but, my intention with this project is to provide a useful development environment with minimal requirements and a easy to understand and use project structure.
+#### ⚙️ [Nunjucks](https://mozilla.github.io/nunjucks/templating.html) template system
 
-## Basic development info
+It has a [`base.njk`](src/_includes/base.njk) with your main HTML template.
 
-### `.eleventy.js` configuration file
+If you don't want to use `njk`, you can "compile" simple HTML files, such as [`no-template-sample-page.html`](src/no-template-sample-page.html)
 
-All 11ty configuration are inside the [`.eleventy.js`](.eleventy.js) file.
+#### Custom Shortcodes
 
-## Utilities
-
-### The `VERSION` variable
+##### The `VERSION` shortcode
 
 During the build, 11ty will generate an `uuid` of 8 characters to be used as unique value to be apended at the end of static files to avoid CDN cache issues. E.g.:
 
@@ -36,9 +32,9 @@ will be replaced to:
 <script src="/assets/js/script.js?v=zpuf45ww"></script>
 ```
 
-### The `BASE_URL` variable
+##### The `BASE_URL` shortcode
 
-During the build, 11ty will replace the `{%BASE_URL%}` inside `html`, `css` and `js` files by a `BASE_URL` defined env variable. The default value is: `http://localhost:8080`. E.g:
+During the build, 11ty will replace the `{%BASE_URL%}` inside `njk`, `html`, `css` and `js` files by a `BASE_URL` defined env variable. The default value is: `http://localhost:8080`. E.g:
 
 ```html
 <script src="{%BASE_URL%}/assets/js/script.js"></script>
@@ -59,6 +55,36 @@ To force the `BASE_URL` website generation locally, you can run:
 ```sh
 $ BASE_URL=https://myawesomewebsite.com npm run build
 ```
+
+#### 📂 Samples
+
+The project itself is a sample project, using all the features. Checkout the [`src`](src/) folder!
+
+#### 🔁 Commom website patterns
+
+##### Selected menu
+
+You can find a simple "set current page active" on the [`src/_includes/base.njk`](src/_includes/base.njk) using Nunjucks template.
+
+##### Per page analytics tracking
+
+You can have some sort of analytics tracker and one specific trackin per page. You can find the usage example at the bottom of the  [`index.njk`](src/index.njk) file.
+
+#### 🧭 Sitemap generator
+
+Automatic sitemap generator using the [`sitemap.njk`](src/sitemap.njk)!
+
+## 🏁 Quick Start
+
+1. [Generate a repo from this template](https://github.com/nalmeida/static-11ty/generate) which will copy this project into your own new repo. _Note: You must be signed in to GitHub for this link to work, else visit the repo directly._
+
+2. Once cloned, `run npm install` to install 11ty. Then `run npm start` to run 11ty in `serve` mode which will create a local server including hot-reload via BrowserSync.
+
+	Use `npm run build` to run a production version.
+
+3. Open [`src/_data/site.js`](src/_data/site.js) and adjust the values to your details.
+
+4. Edit [`index.njk`](src/index.njk) to change the home page, and then create content within src/pages using any templating format you prefer to add content.
 
 # Local development
 
