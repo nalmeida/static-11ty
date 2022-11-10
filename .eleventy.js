@@ -28,11 +28,14 @@ module.exports = function(eleventyConfig) {
 	});
 
 	return {
-		templateFormats: ['html', 'njk', 'liquid'],
 		dir: {
 			data: '_data',
 			input: 'src',
 			output: '_site'
-		}
+		},
+		templateFormats: ['html', 'njk'],
+		markdownTemplateEngine: "njk",
+    htmlTemplateEngine: "njk",
+    dataTemplateEngine: "njk"
 	}
 }

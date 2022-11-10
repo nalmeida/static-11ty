@@ -30,7 +30,7 @@
 </main>
 <footer>
 	<small>
-		Footer - Check out the project: <a href="https://github.com/nalmeida/static-11ty">https://github.com/nalmeida/static-11ty</a>
+		{{ page.date | dateToISO }} - Check out the project: <a href="https://github.com/nalmeida/static-11ty">https://github.com/nalmeida/static-11ty</a>
 	</small>
 </footer>
 
@@ -41,7 +41,7 @@
 	// FakeTracker
 	window.analytics = {
 		track: function(args) {
-			console.log(args)
+			console.log(...args)
 		}
 	}
 	// EndFakeTracker
