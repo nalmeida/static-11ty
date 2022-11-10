@@ -77,7 +77,7 @@ You can find a simple "set current page active" on the [`src/_includes/base.njk`
 
 ##### Per page analytics tracking
 
-You can have some sort of analytics tracker and one specific trackin per page. You can find the usage example at the bottom of the  [`index.njk`](src/index.njk#L24) file.
+You can have some sort of analytics tracker and one specific tracking _per page_. You can find the usage example at the bottom of the  [`index.njk`](src/index.njk#L24) file.
 
 #### 5. 🧭 Sitemap generator
 
@@ -125,6 +125,16 @@ Default value of `BASE_URL` `http://localhost:8080` from the [.eleventy.js](src/
 ```sh
 $ npm run build
 ```
+
+## Generating production ready website locally
+
+To force the `BASE_URL` website generation locally, you can run:
+
+```sh
+$ BASE_URL=https://myawesomewebsite.com npm run build
+```
+
+11ty will output the website at `_site` folder.
 
 ---
 
