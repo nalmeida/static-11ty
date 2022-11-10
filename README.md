@@ -6,6 +6,15 @@ It's based on the amazing [11ty](https://github.com/11ty/eleventy) static site g
 
 ⭐️ See this project live: https://static-11ty.netlify.app
 
+## ⚡️ TL;DR;
+
+1. [Generate a repo from this template](https://github.com/nalmeida/static-11ty/generate) which will copy this project into your own new repo.
+2. Clone your repo.
+3. `$ npm install`
+4. `$ npm start`
+5. 🤩 Enjoy.
+
+
 ## Why?
 
 > This is a super simple static website setup built on top of [11ty](https://github.com/11ty/eleventy). It has only one package dependency, 11ty itself!
@@ -73,6 +82,13 @@ You can have some sort of analytics tracker and one specific trackin per page. Y
 #### 5. 🧭 Sitemap generator
 
 Automatic sitemap generator using the [`sitemap.njk`](src/sitemap.njk)!
+
+## 📌 Requirements
+
+11ty only requires Node.js and supports most operating systems.
+
+- [Node.js 12+](https://www.11ty.dev/blog/eleventy-one-point-oh/#breaking-changes)
+- npm 6.14+
 
 ## 🏁 Quick Start
 
