@@ -40,13 +40,13 @@
 	// Add Your tracking script here!
 	// FakeTracker
 	window.analytics = {
-		track: function(args) {
-			console.log(args)
+		track: function(event, page) {
+			console.log('FakeTracker:', event, page)
 		}
 	}
 	// EndFakeTracker
 </script>
-{% block footer %}
+{% block tracking %}
 
 {% endblock %}
 
