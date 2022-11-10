@@ -8,7 +8,7 @@ It's based on the amazing [11ty](https://github.com/11ty/eleventy) static site g
 
 ## Why?
 
-This is a super simple static website setup built on top of [11ty](https://github.com/11ty/eleventy). It has only one package dependency, 11ty itself!
+> This is a super simple static website setup built on top of [11ty](https://github.com/11ty/eleventy). It has only one package dependency, 11ty itself!
 
 ### Features
 
