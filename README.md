@@ -73,11 +73,11 @@ The project itself is a sample project, using all the features. Checkout the [`s
 
 ##### Selected menu
 
-You can find a simple "set current page active" on the [`src/_includes/base.njk`](src/_includes/base.njk) using Nunjucks template.
+You can find a simple "set current page active" on the [`src/_includes/base.njk`](src/_includes/base.njk#16) using Nunjucks template.
 
 ##### Per page analytics tracking
 
-You can have some sort of analytics tracker and one specific trackin per page. You can find the usage example at the bottom of the  [`index.njk`](src/index.njk) file.
+You can have some sort of analytics tracker and one specific trackin per page. You can find the usage example at the bottom of the  [`index.njk`](src/index.njk#L24) file.
 
 #### 5. 🧭 Sitemap generator
 
@@ -128,6 +128,6 @@ $ npm run build
 
 ---
 
-## Hosted by Netlify
+## Live website hosted by Netlify
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/ea46593b-6007-4d46-907e-1224b2f58a37/deploy-status)](https://app.netlify.com/sites/static-11ty/deploys)
