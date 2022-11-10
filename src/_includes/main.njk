@@ -41,18 +41,13 @@
 	// FakeTracker
 	window.analytics = {
 		track: function(args) {
-			console.log(...args)
+			console.log(args)
 		}
 	}
 	// EndFakeTracker
 </script>
 {% block footer %}
-<script>
-	window.analytics.track("page_viewed", {
-		event_category: "unlogged_end_users",
-		page_name: "wellness_intro_report"
-	});
-</script>
+
 {% endblock %}
 
 </body>
