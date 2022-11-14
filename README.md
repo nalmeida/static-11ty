@@ -73,7 +73,7 @@ The project itself is a sample project, using all the features. Checkout the [`s
 
 ##### Selected menu
 
-You can find a simple "set current page active" on the [`src/_includes/base.njk`](src/_includes/base.njk#16) using Nunjucks template.
+You can find a simple "set current page active" on the [`src/_includes/base.njk`](src/_includes/base.njk#L16) using Nunjucks template.
 
 ##### Per page analytics tracking
 
