@@ -108,6 +108,13 @@ Automatic sitemap generator using the [`sitemap.njk`](src/sitemap.njk)!
 $ npm start
 ```
 
+Or the very popular alias `dev`
+
+```sh
+$ npm run dev
+```
+
+
 It will launch a local server at `http://localhost:8080` with live reload enabled.
 
 By default, 11ty generates a `_site` folder with the transformed files inside.
