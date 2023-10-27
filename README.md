@@ -69,7 +69,7 @@ $ BASE_URL=https://myawesomewebsite.com npm run build
 
 The project itself is a sample project, using all the features. Checkout the [`src`](src/) folder!
 
-#### 4. 🔁 Commom website patterns
+#### 4. 🔁 Common website patterns
 
 ##### Selected menu
 
